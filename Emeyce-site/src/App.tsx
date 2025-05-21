@@ -1,7 +1,5 @@
-export default function App(){
-  return(
-    <div>
-      Emeyce Site
-    </div>
-  )
+export default function App() {
+  return (
+    <div className="text-3xl font-bold underline">Holiis</div>
+  )
 }
