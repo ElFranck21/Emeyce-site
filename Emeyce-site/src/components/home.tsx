@@ -1,7 +1,7 @@
 export default function Home(){
   return(
     <div>
-      Inicio
+      Sergio esta fuera del proyecto
     </div>
   )
 }
