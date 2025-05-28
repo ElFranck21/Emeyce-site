@@ -1,7 +1,7 @@
 export default function Home(){
   return(
     <div>
-      Sergio esta fuera del proyecto
+      Todos amamos a Sergio ❤️❤️❤️❤️❤️❤️
     </div>
   )
 }
