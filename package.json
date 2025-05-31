@@ -1,8 +1,99 @@
 {
+
+  "name": "emeyce-site",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.7",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+
+    "react-router-dom": "^7.6.1",
+    "tailwindcss": "^4.1.7",
+    "vue": "^3.5.14"
+
+
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react-swc": "^3.9.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5"
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/vue3-recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "vue",
+      "react",
+      "react-hooks",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "vue/multi-word-component-names": "off"
+    }
+  },
+  "vite": {
+    "plugins": [
+      "@vitejs/plugin-react-swc"
+    ],
+    "server": {
+      "port": 3000,
+      "open": true
+    },
+    "build": {
+      "outDir": "dist",
+      "rollupOptions": {
+        "output": {
+          "entryFileNames": "assets/[name].[hash].js",
+          "chunkFileNames": "assets/[name].[hash].js",
+          "assetFileNames": "assets/[name].[hash].[ext]"
+        }
+      }
+    }
+
   "dependencies": {
     "vue": "^3.5.15"
   },
   "devDependencies": {
     "vite": "^6.3.5"
+
   }
 }
