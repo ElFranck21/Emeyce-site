@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "../style.css";
 
 
+//ya deberian cargar los estilos de tailwind
 const ContactForm: React.FC = () => {
     const [form, setForm] = useState({ name: '', email: '', message: '' });
     const [submitted, setSubmitted] = useState(false);
