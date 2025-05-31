@@ -4,17 +4,16 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "vite"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.1",
-    "tailwindcss": "^4.1.7"
+    "tailwindcss": "^4.1.7",
+    "vue": "^3.5.14"
+
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
@@ -33,5 +32,52 @@
   "main": "eslint.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "eslintConfig": {
+    "extends": [
+      "plugin:vue/vue3-recommended",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "vue",
+      "react",
+      "react-hooks",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "vue/multi-word-component-names": "off"
+    }
+  },
+  "vite": {
+    "plugins": [
+      "@vitejs/plugin-react-swc"
+    ],
+    "server": {
+      "port": 3000,
+      "open": true
+    },
+    "build": {
+      "outDir": "dist",
+      "rollupOptions": {
+        "output": {
+          "entryFileNames": "assets/[name].[hash].js",
+          "chunkFileNames": "assets/[name].[hash].js",
+          "assetFileNames": "assets/[name].[hash].[ext]"
+        }
+      }
+    }
+  }
 }
