@@ -1,5 +1,12 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./components/home";
+
 export default function App() {
   return (
-    <div className="text-3xl font-bold underline">Holiis</div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
